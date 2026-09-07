@@ -1,6 +1,6 @@
 # Concurrency-safe Rate Limiter + LRU Cache
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white) ![Tests](https://img.shields.io/badge/tests-6%20passing-0bad46) ![License](https://img.shields.io/badge/license-MIT-blue) ![pip](https://img.shields.io/badge/pip%20install-e-blue)
+![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white) ![Tests](https://img.shields.io/badge/tests-6%20passing-0bad46) ![License](https://img.shields.io/badge/license-MIT-blue) ![pip](https://img.shields.io/badge/pip%20install-e-blue) ![Release](https://img.shields.io/badge/Release-v0.1.0-0b5394)
 
 > **Stack:** Python · threading (thread-safety) · sliding-window algorithm · LRU eviction · pytest
 > **Proves:** systems-level **software engineering** — writing thread-safe primitives that back real APIs, and reasoning about concurrency, correctness, and edge cases. This is the "hard systems" skill that clears a senior SWE technical screen.
@@ -42,6 +42,7 @@ It demonstrates a deep, transferable engineering skill — concurrency and algor
 ## Install as a package
 
 ```bash
+pip install https://github.com/edithnjoroge44-pro/rate-limiter-cache/releases/download/v0.1.0/ratelimit_cache-0.1.0-py3-none-any.whl   # official release (no repo needed)
 pip install -e .
 python -c "from ratelimit.limiter import SlidingWindowRateLimiter"
 python -m pytest          # 6 passing tests, incl. a concurrency smoke test
