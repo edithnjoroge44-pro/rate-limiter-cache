@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ratelimit-cache"
+version = "0.1.0"
+description = "Thread-safe sliding-window rate limiter and O(1) LRU cache."
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.setuptools]
+packages = ["ratelimit"]

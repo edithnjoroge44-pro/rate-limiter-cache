@@ -1,6 +1,11 @@
-# Concurrency-safe Rate Limiter + LRU Cache
+Metadata-Version: 2.4
+Name: ratelimit-cache
+Version: 0.1.0
+Summary: Thread-safe sliding-window rate limiter and O(1) LRU cache.
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white) ![Tests](https://img.shields.io/badge/tests-6%20passing-0bad46) ![License](https://img.shields.io/badge/license-MIT-blue) ![pip](https://img.shields.io/badge/pip%20install-e-blue)
+# Concurrency-safe Rate Limiter + LRU Cache
 
 > **Stack:** Python · threading (thread-safety) · sliding-window algorithm · LRU eviction · pytest
 > **Proves:** systems-level **software engineering** — writing thread-safe primitives that back real APIs, and reasoning about concurrency, correctness, and edge cases. This is the "hard systems" skill that clears a senior SWE technical screen.
@@ -38,13 +43,3 @@ pytest tests/ -v
 
 ## Why it's a strong SWE piece
 It demonstrates a deep, transferable engineering skill — concurrency and algorithm correctness — in a small, readable, fully-tested package. A reviewer can read it quickly and see real engineering judgment, not just a scaffold.
-
-## Install as a package
-
-```bash
-pip install -e .
-python -c "from ratelimit.limiter import SlidingWindowRateLimiter"
-python -m pytest          # 6 passing tests, incl. a concurrency smoke test
-```
-
-Drop it into any service: the limiter is thread-safe, and the LRU cache evicts in O(1).
